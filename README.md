@@ -3,7 +3,7 @@ This is proof of concept application for using LRA annotation on JAX-RS endpoint
 This service is the same as the **hotel-service** in the [Narayana quickstart](https://github.com/jbosstm/quickstart/tree/master/rts/lra)
 The REST layer is the same as original however the architecture of the application is based on event-sourcing and CQRS using Axon Framework.
 The original **hotel-service** can be substituted by this service. Only one different is that this service use path `/hotel` instead of `/`
-######NOTE:
+###### NOTE:
 ```
 Due to the issue JBTM-3161, it is need to use Narayana version <= 5.9.6. 
 During the building quickstart in tag 5.9.6, it needs to update version of microprofile-lra in the pom.xml. 
@@ -11,7 +11,7 @@ During the building quickstart in tag 5.9.6, it needs to update version of micro
 Comparison between original hotel service in the Narayana quickstart and this Axon Spring-boot hotel service application:
 ![GitHub Logo](arch.png)
 
-#How to run
+# How to run
 
 - First, the LRA quickstart repository should be cloned and set up. Following README in that [repo](https://github.com/jbosstm/quickstart/tree/master/rts/lra).
 - When the LRA quickstarts is running, stop the original **hotel-service**
