@@ -30,10 +30,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
@@ -44,19 +40,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 public class Booking {
 
-    @Id
     @JsonProperty("id")
     private String id;
 
     @JsonProperty("name")
     private String name;
 
-    @Enumerated(value = EnumType.STRING)
     @JsonProperty("status")
     private BookingStatus status;
 
