@@ -4,10 +4,10 @@ This service is the same as the **hotel-service** in the [Narayana quickstart](h
 The REST layer is the same as original however the architecture of the application is based on event-sourcing and CQRS using Axon Framework.
 The original **hotel-service** can be substituted by this service. Only one different is that this service use path `/hotel` instead of `/`
 ###### NOTE:
-```
-Due to the issue JBTM-3161, it is need to use Narayana version <= 5.9.6. 
-During the building quickstart in tag 5.9.6, it needs to update version of microprofile-lra in the pom.xml. 
-```
+
+Due to the issue JBTM-3161, it needs to to modify and rebuild 5.9.8 Narayana [lra-proxy](https://github.com/jbosstm/narayana/tree/master/rts/lra/lra-proxy).
+Make constructor of [_LRAParticipantRegistry_](https://github.com/jbosstm/narayana/blob/master/rts/lra/lra-proxy/api/src/main/java/io/narayana/lra/client/internal/proxy/nonjaxrs/LRAParticipantRegistry.java) public and install modify version to the repository `mvn clean package`.
+
 Comparison between original hotel service in the Narayana quickstart and this Axon Spring-boot hotel service application:
 ![GitHub Logo](arch.png)
 
