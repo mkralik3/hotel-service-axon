@@ -1,6 +1,6 @@
 = LRA Spring Boot Quickstart
 
-This repository extends https://github.com/jbosstm/quickstart/tree/master/rts/lra[Narayana quickstart] about Spring Boot and Axon examples.
+This repository extends https://github.com/jbosstm/quickstart/tree/master/rts/lra[Narayana LRA quickstart] about Spring Boot and Axon examples.
 Examples can replace the original services in the Narayana quickstart so they can be used with the original quickstart scenario.
 
 |===
