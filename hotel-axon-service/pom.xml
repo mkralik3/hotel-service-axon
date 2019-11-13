@@ -9,7 +9,7 @@
     	<version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hotel-service-axon</artifactId>
+    <artifactId>hotel-axon-service</artifactId>
     <name>LRA/SpringBoot/Axon - Hotel service</name>
     <description>LRA Quickstart hotel service as an Axon based app</description>
 
