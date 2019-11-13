@@ -1,0 +1,20 @@
+= LRA Spring Boot Quickstart
+
+This repository extends https://github.com/jbosstm/quickstart/tree/master/rts/lra[Narayana quickstart] about Spring Boot and Axon examples.
+Examples can replace the original services in the Narayana quickstart so they can be used with the original quickstart scenario.
+
+|===
+|*Quickstart* |*Description* |*Prerequisites*
+
+|link:flight-service/README.adoc[Flight Spring Boot Service]
+|This service (quickstart) demonstrate usage of LRA in Spring Boot application.
+|Running original LRA https://github.com/jbosstm/quickstart/tree/master/rts/lra[ quickstart]
+
+|link:hotel-axon-service/README.adoc[Hotel Axon Service]
+|This service (quickstart) demonstrate usage of LRA in Axon based application with REST API endpoints.
+|Running original LRA https://github.com/jbosstm/quickstart/tree/master/rts/lra[ quickstart]
+
+|TBD (meanwhile in separate https://github.com/mkralik3/axon-microservices-example[repo])
+|These services demonstrate usage of LRA in Axon based applications by usage the https://github.com/mkralik3/lra-axon-connector[AXON LRA connector].
+|Running original LRA https://github.com/jbosstm/quickstart/tree/master/rts/lra[ quickstart]
+|===

@@ -2,30 +2,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mkralik.learning.hotel</groupId>
-    <artifactId>hotel-axon</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>hotel-axon</name>
+    <groupId>org.mkralik.lra.quickstart</groupId>
+    <artifactId>lra-spring-quickstarts-all</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>LRA SpringBoot QuickStart</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
+        <narayana.version>5.10.1.Final-SNAPSHOT</narayana.version>
+        <axon.version>4.2</axon.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.axonframework</groupId>
-            <artifactId>axon-spring-boot-starter</artifactId>
-            <version>4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jersey</artifactId>
@@ -33,17 +41,13 @@
         <dependency>
             <groupId>org.jboss.narayana.rts</groupId>
             <artifactId>narayana-lra</artifactId>
-            <version>5.9.8.Final</version>
+            <version>${narayana.version}</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>hotel-axon-service</module>
+        <module>flight-service</module>
+    </modules>
 
 </project>
