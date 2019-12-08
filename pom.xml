@@ -16,7 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
-        <narayana.version>5.10.1.Final-SNAPSHOT</narayana.version>
+        <narayana.version>5.10.1.Final</narayana.version>
         <axon.version>4.2</axon.version>
     </properties>
 
